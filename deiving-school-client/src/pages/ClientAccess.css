@@ -1,0 +1,42 @@
+/* src/components/ClientAccess.css */
+.access-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3rem;
+  padding: 2rem;
+  background-color: #f0f0f0;
+}
+
+.access-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 2rem;
+  border-radius: 8px;
+  background-color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  width: 300px;
+}
+
+.access-form h2 {
+  text-align: center;
+}
+
+.access-form input,
+.access-form button {
+  padding: 10px;
+  font-size: 1rem;
+}
+
+.access-form button {
+  background-color: #00192f;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.access-form button:hover {
+  background-color: #003763;
+}
