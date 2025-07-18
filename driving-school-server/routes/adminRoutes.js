@@ -6,13 +6,14 @@ import {
   updateClient,
   deleteClient,
 } from '../controllers/adminController.js';
+import { verifyToken, verifyAdmin } from '../middlewares/authMiddleware.js';
 
 const router = express.Router();
 
-router.post('/clients', createClient);
-router.get('/clients', getAllClients);
-router.get('/clients/:id', getClientById);
-router.put('/clients/:id', updateClient);
-router.delete('/clients/:id', deleteClient);
+router.post('/clients', verifyToken, verifyAdmin, createClient);
+router.get('/clients', verifyToken, verifyAdmin, getAllClients);
+router.get('/clients/:id', verifyToken, verifyAdmin, getClientById);
+router.put('/clients/:id', verifyToken, verifyAdmin, updateClient);
+router.delete('/clients/:id', verifyToken, verifyAdmin, deleteClient);
 
 export default router;
